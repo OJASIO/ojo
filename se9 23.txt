@@ -3,9 +3,9 @@
 03	int
 04	main(int argc, char **argv)
 05	{
-06	    int a[] = {2, 4, 6, 8, 10, 12, 14, 16};
+06	    int a[] = {2, 4, 6, 8, 10, 12, 98, 46};
 07	    int key = atoi(argv[1]);
-08	    int n = 8;
+08	    int n = 9;
 09	    int low = 0;
 10	    int high = n - 1;
 11	    int middle;
