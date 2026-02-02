@@ -44,12 +44,12 @@ elif st.session_state.page == 'Experience':
     
     # Yubi Section
     st.subheader("Data Engineer II | Yubi, Mumbai (December 2023-August 2024)")
-    st.write("- **Joined Yubi on permanent role and Led a team of 8 people, delegating tasks and collaborating with cross-functional teams.")
-    st.write("- **Streamlined report development process that resulted in faster onboarding of new clients thereby resulting in an increase in revenue of the firm by 40%.")
-    st.write("- **Acted as lead from data reporting team for a data migration project from public AWS to private AWS cloud for a largest public sector bank and major private sector Indian bank.")
-    st.write("- **Developed business reporting dashboards on the Superset Tool which helped in critical business decisions thereby, increasing revenue by 20%")
-    st.write("- **Reduced data quality issues by 40% % through proactive code bug rectification.")
-    st.write("- **Automated manual-generated reports using Python, increasing team efficiency by 35%.")
+    st.write("- Joined Yubi on permanent role and Led a team of 8 people, delegating tasks and collaborating with cross-functional teams.")
+    st.write("Streamlined report development process that resulted in faster onboarding of new clients thereby resulting in an increase in revenue of the firm by 40%.")
+    st.write("Acted as lead from data reporting team for a data migration project from public AWS to private AWS cloud for a largest public sector bank and major private sector Indian bank.")
+    st.write("Developed business reporting dashboards on the Superset Tool which helped in critical business decisions thereby, increasing revenue by 20%")
+    st.write("Reduced data quality issues by 40% % through proactive code bug rectification.")
+    st.write("Automated manual-generated reports using Python, increasing team efficiency by 35%.")
     st.subheader("Data Engineer | SpanIdea, Mumbai (June 2022-December 2023)")
     st.write("Developed integration reports using Python, PostgreSQL, and Airflow. long running jobs by tuning queries resulting in 50% decrease in runtime.")
     st.write("Automated Loan summary and MIS reports through Python there by increasing the efficiency of Operations team by 60%.")
@@ -63,7 +63,7 @@ elif st.session_state.page == 'Experience':
     st.subheader("Data Engineer | Technical Associate| Data Engineer | Teradata India (September 2019- June 2022)")
     st.write("Progressed from Intern to SME Data Engineer, eventually leading a team of 5 members to support global clients like Unilever Plc and Procter & Gamble (P&G)")
     st.write("Optimized high CPU-consuming queries by implementing volatile tables and statistics collection, reducing the runtime of critical SLA jobs by 85%.")
-    st.write("Recovered millions of euros in spend variances for Unilever through comprehensive root cause analysis of indirect procurement, media, and logistics data.")
+    st.write("Saved 5 Million euros in spend variances for Unilever through comprehensive root cause analysis of indirect procurement, media, and logistics data.")
     st.write("Engineered automation tools in Python and Shell script to identify data duplicates and remove marketing program data, increasing overall work efficiency by up to 40%.")
     st.write("Enhanced service delivery efficiency by 50% by building automated sanity check jobs in TWS and BTEQ to validate record loading in target tables. ")
     st.write("Orchestrated large-scale ETL operations, extracting data from diverse API sources and flat files into the Enterprise Data Warehouse (EDW) using Teradata BTEQ, FastLoad and TPT.")
@@ -82,6 +82,7 @@ elif st.session_state.page == 'Education':
 
     st.write("**Bachelors in Computer Engineering**")
     st.write("Terna Engineering College | June 2015 - June 2019")
+    st.write("Grade: 7.75/10")
     
     st.divider()
     st.subheader("🚀 Strategic Projects")
