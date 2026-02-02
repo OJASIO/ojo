@@ -22,7 +22,7 @@ with st.container():
         # Citations are now safely inside the strings
         st.title("Ojas Indulkar")
         st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate")
-        st.write("📍 Heidelberg, Germany| [cite_start]📧 indulkarojas08@gmail.com")
+        st.write("📍 Heidelberg, Germany|📧 indulkarojas08@gmail.com")
         st.write("📱 +49 015510136816")
         st.info("4+ Years of experience in ETL, Data Warehousing, and Cloud Solutions.")
 
