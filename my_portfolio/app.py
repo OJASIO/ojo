@@ -71,6 +71,24 @@ if st.sidebar.button("Education"):
 if st.sidebar.button("Projects"):
     set_page('Projects')
 
+st.sidebar.divider()
+
+# --- RESUME DOWNLOAD BUTTON ---
+# Make sure your PDF file is named 'Ojas_Indulkar_CV.pdf' and is in the 'my_portfolio' folder
+resume_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Ojas_Indulkar_cv.pdf")
+
+if os.path.exists(resume_path):
+    with open(resume_path, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    st.sidebar.download_button(
+        label="📄 Download Resume (PDF)",
+        data=PDFbyte,
+        file_name="Ojas_Indulkar_CV.pdf",
+        mime="application/octet-stream",
+    )
+else:
+    st.sidebar.warning("Resume PDF not found in repository.")
+
 # --- IMAGE PATH LOGIC ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
 img_path = os.path.join(current_dir, "profile.PNG")
@@ -118,8 +136,8 @@ elif st.session_state.page == 'Experience':
     st.write("- Engineered automation tools in Python and Shell script to identify data duplicates and remove marketing program data, increasing overall work efficiency by up to 40%.")
     st.write("- Enhanced service delivery efficiency by 50% by building automated sanity check jobs in TWS and BTEQ to validate record loading in target tables. ")
     st.write("- Orchestrated large-scale ETL operations, extracting data from diverse API sources and flat files into the Enterprise Data Warehouse (EDW) using Teradata BTEQ, FastLoad and TPT.")
-    st.write("Mitigated legal and financial risks by automating API status checks, preventing campaign outreach to opted-out consumers and saving thousands of dollars in potential penalty costs.")
-    st.write("Managed production deployments and job scheduling using GIT version control, Unix shell scripting, and Crontab.")
+    st.write("- Mitigated legal and financial risks by automating API status checks, preventing campaign outreach to opted-out consumers and saving thousands of dollars in potential penalty costs.")
+    st.write("- Managed production deployments and job scheduling using GIT version control, Unix shell scripting, and Crontab.")
     
     if st.button("⬅️ Back to Home"):
         set_page('Home')
