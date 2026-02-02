@@ -7,7 +7,7 @@ st.set_page_config(page_title="Ojas Indulkar | Data Engineer", page_icon="📊",
 with st.container():
     col1, col2 = st.columns([1, 3])
     with col1:
-        st.image("profile.jpg", width=220)
+        st.image("profile.png", width=220)
     with col2:
         st.title("Ojas Indulkar [cite: 10]")
         st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate [cite: 11, 85]")
