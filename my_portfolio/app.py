@@ -20,11 +20,11 @@ with st.container():
             
     with col2:
         # Citations are now safely inside the strings
-        [cite_start]st.title("Ojas Indulkar [cite: 10]")
-        [cite_start]st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate [cite: 11, 83-85]")
-        [cite_start]st.write("📍 Heidelberg, Germany [cite: 9] | [cite_start]📧 indulkarojas08@gmail.com [cite: 2-4]")
-        [cite_start]st.write("📱 +49 015510136816 [cite: 6]")
-        [cite_start]st.info("4+ Years of experience in ETL, Data Warehousing, and Cloud Solutions. [cite: 11, 14]")
+        [cite_start]st.title("Ojas Indulkar")
+        [cite_start]st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate")
+        [cite_start]st.write("📍 Heidelberg, Germany| [cite_start]📧 indulkarojas08@gmail.com")
+        [cite_start]st.write("📱 +49 015510136816")
+        [cite_start]st.info("4+ Years of experience in ETL, Data Warehousing, and Cloud Solutions.")
 
 st.divider()
 
