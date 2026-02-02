@@ -4,6 +4,53 @@ import os
 # Page Config
 st.set_page_config(page_title="Ojas Indulkar | Data Engineer", page_icon="📊", layout="wide")
 
+st.markdown("""
+    <style>
+    /* Main background and text color */
+    .stApp {
+        background-color: #0E1117;
+        color: #FAFAFA;
+    }
+    
+    /* Sidebar styling */
+    section[data-testid="stSidebar"] {
+        background-color: #161B22 !important;
+    }
+    
+    /* Sidebar buttons styling */
+    .stSidebar [data-testid="stButton"] button {
+        background-color: #21262D;
+        color: white;
+        border: 1px solid #30363D;
+        width: 100%;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    
+    .stSidebar [data-testid="stButton"] button:hover {
+        border-color: #58A6FF;
+        color: #58A6FF;
+        background-color: #161B22;
+    }
+
+    /* Headings */
+    h1, h2, h3 {
+        color: #58A6FF !important;
+    }
+
+    /* Cards/Expander look for work experience */
+    .stExpander {
+        background-color: #161B22;
+        border: 1px solid #30363D !important;
+        border-radius: 8px;
+    }
+
+    /* Divider color */
+    hr {
+        border-top: 1px solid #30363D !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 
 # --- NAVIGATION CONTROLLER ---
@@ -71,8 +118,8 @@ elif st.session_state.page == 'Experience':
     st.write("- Engineered automation tools in Python and Shell script to identify data duplicates and remove marketing program data, increasing overall work efficiency by up to 40%.")
     st.write("- Enhanced service delivery efficiency by 50% by building automated sanity check jobs in TWS and BTEQ to validate record loading in target tables. ")
     st.write("- Orchestrated large-scale ETL operations, extracting data from diverse API sources and flat files into the Enterprise Data Warehouse (EDW) using Teradata BTEQ, FastLoad and TPT.")
-    st.write("- Mitigated legal and financial risks by automating API status checks, preventing campaign outreach to opted-out consumers and saving thousands of dollars in potential penalty costs.")
-    st.write("- Managed production deployments and job scheduling using GIT version control, Unix shell scripting, and Crontab.")
+    st.write("Mitigated legal and financial risks by automating API status checks, preventing campaign outreach to opted-out consumers and saving thousands of dollars in potential penalty costs.")
+    st.write("Managed production deployments and job scheduling using GIT version control, Unix shell scripting, and Crontab.")
     
     if st.button("⬅️ Back to Home"):
         set_page('Home')
