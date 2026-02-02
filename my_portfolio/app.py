@@ -4,6 +4,7 @@ import os
 # Page Config
 st.set_page_config(page_title="Ojas Indulkar | Data Engineer", page_icon="📊", layout="wide")
 
+# --- DARK THEME CSS ---
 st.markdown("""
     <style>
     /* Main background and text color */
@@ -17,20 +18,22 @@ st.markdown("""
         background-color: #161B22 !important;
     }
     
-    /* Sidebar buttons styling */
-    .stSidebar [data-testid="stButton"] button {
-        background-color: #21262D;
-        color: white;
-        border: 1px solid #30363D;
+    /* Sidebar & Main Page Buttons styling */
+    div.stButton > button {
+        background-color: #21262D !important;
+        color: #FAFAFA !important; /* Forces text to be white/light grey always */
+        border: 1px solid #30363D !important;
         width: 100%;
         border-radius: 5px;
-        transition: 0.3s;
+        font-weight: 500;
+        display: block !important; /* Ensures text is rendered */
     }
     
-    .stSidebar [data-testid="stButton"] button:hover {
-        border-color: #58A6FF;
-        color: #58A6FF;
-        background-color: #161B22;
+    /* Button Hover Effect */
+    div.stButton > button:hover {
+        border-color: #58A6FF !important;
+        color: #58A6FF !important;
+        background-color: #1c2128 !important;
     }
 
     /* Headings */
@@ -38,7 +41,7 @@ st.markdown("""
         color: #58A6FF !important;
     }
 
-    /* Cards/Expander look for work experience */
+    /* Expander look */
     .stExpander {
         background-color: #161B22;
         border: 1px solid #30363D !important;
@@ -49,9 +52,14 @@ st.markdown("""
     hr {
         border-top: 1px solid #30363D !important;
     }
+
+    /* Download Button Specific Styling */
+    div.stDownloadButton > button {
+        background-color: #238636 !important;
+        color: white !important;
+    }
     </style>
     """, unsafe_allow_html=True)
-
 
 # --- NAVIGATION CONTROLLER ---
 if 'page' not in st.session_state:
