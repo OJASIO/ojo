@@ -13,12 +13,14 @@ def set_page(page_name):
 
 # --- SIDEBAR / TOP NAVIGATION ---
 st.sidebar.title("Navigation")
-if st.sidebar.button("🏠 Home"):
+if st.sidebar.button("Home"):
     set_page('Home')
-if st.sidebar.button("🏢 Professional Experience"):
+if st.sidebar.button("Professional Experience"):
     set_page('Experience')
-if st.sidebar.button("🎓 Education & Projects"):
+if st.sidebar.button("Education"):
     set_page('Education')
+if st.sidebar.button("Projects"):
+    set_page('Projects')
 
 # --- IMAGE PATH LOGIC ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -75,7 +77,7 @@ elif st.session_state.page == 'Experience':
 
 # --- PAGE: EDUCATION ---
 elif st.session_state.page == 'Education':
-    st.header("🎓 Education & Strategic Projects")
+    st.header("🎓 Education")
     
     st.write("**M.Sc. Applied Data Science and Analytics**")
     st.write("SRH Hochschule Heidelberg | April 2025 - March 2027")
@@ -83,9 +85,9 @@ elif st.session_state.page == 'Education':
     st.write("**Bachelors in Computer Engineering**")
     st.write("Terna Engineering College | June 2015 - June 2019")
     st.write("Grade: 7.75/10")
-    
-    st.divider()
-    st.subheader("🚀 Strategic Projects")
+# -------PAGE: PROJECTS--------------
+elif st.session_state.page == 'Projects':
+    st.header("Projects")
     st.write("- **Frankfurt Market Risk Engine:** ETL pipeline for DAX 40 volatility.")
     st.write("- **Global Spend Analyzer:** Tableau visualization for MNC procurement.")
 
