@@ -44,13 +44,13 @@ elif st.session_state.page == 'Experience':
     
     # Yubi Section
     st.subheader("Data Engineer II | Yubi, Mumbai (2024)")
-    [cite_start]st.write("- **Lead for AWS Migration:** Managed 8 people for a private cloud migration for a major bank. [cite: 21, 23]")
-    [cite_start]st.write("- **Revenue Growth:** Streamlined onboarding, increasing revenue by 40%. [cite: 22]")
+    st.write("- **Lead for AWS Migration:** Managed 8 people for a private cloud migration for a major bank.")
+    st.write("- **Revenue Growth:** Streamlined onboarding, increasing revenue by 40%.")
     
     # Teradata Section
     st.subheader("SME Data Engineer | Teradata India (2019-2022)")
-    [cite_start]st.write("- **SLA Optimization:** Reduced critical job runtime by 85%. [cite: 70]")
-    [cite_start]st.write("- **Financial Recovery:** Saved millions in spend variances for Unilever. [cite: 71]")
+    st.write("- **SLA Optimization:** Reduced critical job runtime by 85%.")
+    st.write("- **Financial Recovery:** Saved millions in spend variances for Unilever.")
     
     if st.button("⬅️ Back to Home"):
         set_page('Home')
@@ -60,7 +60,7 @@ elif st.session_state.page == 'Education':
     st.header("🎓 Education & Strategic Projects")
     
     st.write("**M.Sc. Applied Data Science and Analytics**")
-    [cite_start]st.write("SRH Hochschule Heidelberg | Expected 2027 [cite: 84-86]")
+    st.write("SRH Hochschule Heidelberg | Expected 2027")
     
     st.divider()
     st.subheader("🚀 Strategic Projects")
