@@ -20,11 +20,11 @@ with st.container():
             
     with col2:
         # Citations are now safely inside the strings
-        [cite_start]st.title("Ojas Indulkar")
-        [cite_start]st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate")
-        [cite_start]st.write("📍 Heidelberg, Germany| [cite_start]📧 indulkarojas08@gmail.com")
-        [cite_start]st.write("📱 +49 015510136816")
-        [cite_start]st.info("4+ Years of experience in ETL, Data Warehousing, and Cloud Solutions.")
+        st.title("Ojas Indulkar")
+        st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate")
+        st.write("📍 Heidelberg, Germany| [cite_start]📧 indulkarojas08@gmail.com")
+        st.write("📱 +49 015510136816")
+        st.info("4+ Years of experience in ETL, Data Warehousing, and Cloud Solutions.")
 
 st.divider()
 
@@ -33,32 +33,32 @@ st.header("🏢 Professional Journey")
 
 # Yubi Experience
 with st.expander("🚀 Data Engineer II | Yubi, Mumbai", expanded=True):
-    [cite_start]st.write("01/2024 – 08/2024 [cite: 20]")
-    [cite_start]st.write("- **Leadership:** Led a team of 8 people, delegating tasks and collaborating with cross-functional teams.")
-    [cite_start]st.write("- **Cloud Migration:** Acted as lead for a data migration project from public AWS to private AWS cloud for large banks.")
-    [cite_start]st.write("- **Business Impact:** Streamlined report development, increasing revenue by 40%.")
+    st.write("01/2024 – 08/2024 [cite: 20]")
+    st.write("- **Leadership:** Led a team of 8 people, delegating tasks and collaborating with cross-functional teams.")
+    st.write("- **Cloud Migration:** Acted as lead for a data migration project from public AWS to private AWS cloud for large banks.")
+    st.write("- **Business Impact:** Streamlined report development, increasing revenue by 40%.")
 
 # SpanIdea Experience
 with st.expander("📊 Data Consultant | SpanIdea, Mumbai"):
-    [cite_start]st.write("06/2022 – 12/2023 [cite: 55]")
-    [cite_start]st.write("- **Performance:** Reduced job runtime by 50% via query tuning.")
-    [cite_start]st.write("- **Automation:** Automated loan summary and MIS reports using Python.")
-    [cite_start]st.write("- **Integration:** Developed pipelines to stream data through Kafka into Redshift.")
+    st.write("06/2022 – 12/2023 [cite: 55]")
+    st.write("- **Performance:** Reduced job runtime by 50% via query tuning.")
+    st.write("- **Automation:** Automated loan summary and MIS reports using Python.")
+    st.write("- **Integration:** Developed pipelines to stream data through Kafka into Redshift.")
 
 # Teradata Experience
 with st.expander("🛡️ SME Data Engineer | Teradata India"):
-    [cite_start]st.write("09/2019 – 06/2022")
-    [cite_start]st.write("- **Scale:** Managed ETL for global clients like Unilever and P&G.")
-    [cite_start]st.write("- **Optimization:** Reduced critical SLA job runtime by 85% using volatile tables and statistics.")
-    [cite_start]st.write("- **Recovery:** Recovered millions of euros in spend variances for Unilever.")
+    st.write("09/2019 – 06/2022")
+    st.write("- **Scale:** Managed ETL for global clients like Unilever and P&G.")
+    st.write("- **Optimization:** Reduced critical SLA job runtime by 85% using volatile tables and statistics.")
+    st.write("- **Recovery:** Recovered millions of euros in spend variances for Unilever.")
 
 st.divider()
 
 # --- SKILLS ---
 st.header("🛠️ Technical Arsenal")
-[cite_start]st.write("**Cloud:** AWS (EMR, Redshift, Athena, Beanstalk), GCP (BigQuery, PubSub).")
-[cite_start]st.write("**Data Engineering:** ETL, Data Warehousing, Airflow, Docker, Teradata BTEQ.")
-[cite_start]st.write("**Languages:** Python, SQL, NumPy, Pandas.")
+st.write("**Cloud:** AWS (EMR, Redshift, Athena, Beanstalk), GCP (BigQuery, PubSub).")
+st.write("**Data Engineering:** ETL, Data Warehousing, Airflow, Docker, Teradata BTEQ.")
+st.write("**Languages:** Python, SQL, NumPy, Pandas.")
 
 st.divider()
 st.write("Built with ❤️ in Heidelberg | © 2026 Ojas Indulkar")
