@@ -104,7 +104,7 @@ if st.session_state.page == 'Home':
     with col2:
         st.title("Ojas Indulkar")
         st.subheader("Senior Data Engineer | M.Sc. Applied Data Science Candidate")
-        st.info("5+ Years of Industry Experience in FinTech & Cloud Architecture. Available for Working Student roles in Frankfurt.")
+        st.info("Ich bin Ojas Indulkar. Ich komme aus Indien und jetzt wohne ich in Heidelberg. Ich studiere Msc. Applied Data Science and Analytics bei SRH University Heidelberg.Ich habe 5 Jahre Berufserfahrung als Dateningenieur und bin jetzt auf der Suche nach Praktika und Werkstudentenstellen im Bereich Data Science.")
         st.write("Click the buttons in the sidebar to explore my journey.")
 
 # --- PAGE: PROFESSIONAL EXPERIENCE ---
