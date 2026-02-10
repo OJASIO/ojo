@@ -38,7 +38,7 @@ st.markdown("""
 
     /* Headings */
     h1, h2, h3 {
-        color: #58A6FF !important;
+        color: #FFFFFF !important;
     }
 
     /* Expander look */
