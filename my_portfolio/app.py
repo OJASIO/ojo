@@ -99,7 +99,7 @@ else:
 
 # --- IMAGE PATH LOGIC ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
-img_path = os.path.join(current_dir, "profile.PNG")
+img_path = os.path.join(current_dir, "CV_Photo.PNG")
 
 # --- PAGE: HOME ---
 if st.session_state.page == 'Home':
