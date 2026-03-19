@@ -1,0 +1,33 @@
+# 1. Python Cache (This hides the __pycache__ folder in your screenshot)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 2. Virtual Environments (Keeps the heavy libraries out)
+venv/
+env/
+.venv/
+
+# 3. Environment Variables & Secrets (CRITICAL: Hides your API keys/passwords)
+.env
+*.secret
+
+# 4. OS Generated Files (Stops Windows/Mac junk files from uploading)
+.DS_Store
+Thumbs.db
+
+# 5. IDE / Editor Folders (Hides VS Code or PyCharm settings)
+.vscode/
+.idea/
+*.swp
+
+# 6. Machine Learning Models & Data (Keeps your repo from getting too heavy)
+*.csv
+*.xlsx
+*.pkl
+*.h5
+*.model
+
+# 7. Logs and Databases
+*.log
+*.sqlite3
