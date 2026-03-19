@@ -3,7 +3,7 @@ name: Deploy Portfolio to GitHub Pages
 on:
   # This triggers the deployment every time you push to the main branch
   push:
-    branches: ["main"] 
+    branches: ["master"] 
   # This allows you to run the deployment manually from the Actions tab
   workflow_dispatch:
 
