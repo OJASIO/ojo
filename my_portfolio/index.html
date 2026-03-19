@@ -638,7 +638,7 @@
     btn.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:white;fill:none;stroke-width:2;flex-shrink:0;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Sending...`;
     try {
       // FORMSPREE: replace YOUR_FORM_ID with your endpoint from formspree.io
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const res = await fetch('https://formspree.io/f/mojkrnqv', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value })
