@@ -411,8 +411,8 @@
       <div>
         <h2 class="about-heading">I build data infrastructure that <em>performs</em> under pressure.</h2>
         <div class="about-body">
-          <p>My background is in banking and financial services — environments where 99.8% SLA compliance and regulatory data quality aren't optional. At Teradata and Yubi, I cut batch job runtimes by up to 85%, recovered €5M in procurement variances, and processed 5–10TB of loan portfolio data daily.</p>
-          <p>Currently completing my M.Sc. in Applied Data Science & Analytics at SRH Heidelberg (graduating March 2027). Looking for a working student role where I can contribute from day one — structured, independent, no handholding needed.</p>
+          <p>Data Engineer and M.Sc. Applied Data Science student (SRH Heidelberg) with 5 years of enterprise experience delivering production-grade data pipelines, cloud migrations, and ML-integrated workflows for global clients including Unilever, P&G, and major Indian banks (SBI, Axis, HDFC, DBS). Proven track record of independently owning end-to-end data systems — from Kafka streaming pipelines and AWS infrastructure to biosensor ML models adopted by research clients — with measurable impact across financial services, FMCG, and life sciences.</p>
+          <p>Pursuing Master's studies to move beyond execution into data strategy and advanced methodology — bridging practical data engineering experience with graduate-level methodology to contribute meaningfully from day one. Seeking a Werkstudent role in Data Engineering, Data Science, or BI where both can be applied immediately.</p>
         </div>
       </div>
       <div class="about-meta">
@@ -457,12 +457,12 @@
         <div class="exp-item">
           <div class="exp-date">Oct 2025 – Mar 2026<br><span>Heidelberg, DE</span></div>
           <div>
-            <div class="exp-role">ML Engineer</div>
+            <div class="exp-role">Data Science Case Study</div>
             <div class="exp-company">BioMedX GmbH</div>
             <ul class="exp-bullets">
-              <li>Delivered a Python diagnostic pipeline integrated into BioMedX's existing GUI tool — achieving <strong>99% accuracy</strong> and MAE of 0.05 on a previously unsolved biosensor dataset, now in active client use.</li>
-              <li>Automated baseline drift prediction & injection event monitoring end-to-end via hybrid ML model (exponential decay + Facebook Prophet), eliminating <strong>100% of manual signal inspection</strong>.</li>
-              <li>Authored full technical documentation enabling zero-handover reproducibility across the research team.</li>
+              <li>Identified that BioMedX's biosensor baseline calculation relied entirely on manual inspection consuming 3–4 hours per experiment — led the technical development of a Python diagnostic pipeline (Holt smoothing + Savitzky–Golay filtering) reducing baseline calculation time to <strong>50</strong> minutes, enabling drug injection events to follow immediately after model training.</li>
+              <li>Engineered a hybrid ML model combining exponential decay and Facebook Prophet to automate baseline drift prediction and injection event monitoring end-to-end — achieving <strong>95%</strong> accuracy and MAE of <strong>0.05</strong>, eliminating all manual signal inspection from the clinical workflow.</li>
+              <li>Delivered full technical documentation enabling zero-handover reproducibility — the pipeline received official confirmation of internal adoption by the BioMedX research team within the project timeline.</li>
             </ul>
             <div class="exp-tags"><span class="exp-tag">Python</span><span class="exp-tag">Facebook Prophet</span><span class="exp-tag">Signal Processing</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Time-Series</span></div>
           </div>
@@ -473,10 +473,13 @@
             <div class="exp-role">Senior Data Engineer & Consultant</div>
             <div class="exp-company">Yubi & SpanIdea Systems</div>
             <ul class="exp-bullets">
-              <li>Cut <strong>200+ nightly batch job runtimes by 50%</strong> for 3 regulated Indian banks via SQL tuning & index optimization — saving ~<strong>€8K/month</strong> in cloud compute costs.</li>
-              <li>Designed AWS cloud data platform (Redshift, S3, RDS) processing <strong>5–10 TB daily</strong> — reduced delivery cycle time from 10 to <strong>4 days</strong>.</li>
-              <li>Built CI/CD test automation frameworks, cutting manual QA effort by <strong>60%</strong> with zero-defect release track.</li>
-              <li>Automated <strong>15+ hrs/week</strong> of manual financial reporting; served <strong>50+ stakeholders</strong> via self-service Tableau & Superset dashboards.</li>
+              <li>1.	Migrated loan reporting infrastructure for SBI and Axis Bank to private AWS for regulatory compliance — architected a date-based query routing layer (live data lake for current-date, Redshift for T-1 historical), resolving mid-migration failures and ensuring uninterrupted report delivery throughout cutover.</li>
+              <li>2.	Built the CIR auto-commentary pipeline from scratch covering 5,000+ listed companies — extracted corporate shareholding data from Yubi's subsidiary Corpository, staged across MongoDB and Athena, and fed a clean data stream to the MLOps credit intelligence model, fully replacing a manual analyst process.</li>
+              <li>3.	Engineered a Kafka-based streaming pipeline replacing batch-delayed loan portfolio reporting — continuously extracted from the data lake and loaded into Redshift, reducing reporting lag from several hours to near real-time for multiple lender clients.</li>
+              <li>4.	Took ownership of onboarding new team members through structured knowledge transfer sessions and introduced a product approval gate eliminating infeasible development requests — saving the team <strong>approximately 40 hours per month</strong> in wasted engineering effort and improving pipeline delivery reliability.</li>
+              <li>5.	Standardised report pipeline templates and automated recurring client onboarding steps in Python — reducing new lender report onboarding time <strong>from 2–3 weeks to 2 days</strong>, enabling the team to scale integrations without additional headcount.</li>
+              <li>6.	Introduced proactive data quality monitoring across critical reporting pipelines — identified and resolved recurring code-level bugs before client impact, reducing data quality support tickets by <strong>40%</strong>.</li>
+              <li>7.	Automated MIS and loan summary reports previously handled manually by the operations team via Python and Airflow — eliminating 15+ hours of weekly manual effort and increasing team efficiency by <strong>35%</strong>.</li>
             </ul>
             <div class="exp-tags"><span class="exp-tag">SQL</span><span class="exp-tag">Python</span><span class="exp-tag">AWS</span><span class="exp-tag">Airflow</span><span class="exp-tag">Kafka</span><span class="exp-tag">Tableau</span><span class="exp-tag">CI/CD</span></div>
           </div>
@@ -487,10 +490,14 @@
             <div class="exp-role">Data Engineer → Subject Matter Expert</div>
             <div class="exp-company">Teradata India</div>
             <ul class="exp-bullets">
-              <li>Achieved <strong>85% database performance improvement</strong> across 200+ batch jobs (6 hrs → under 1 hr) — delivering <strong>99.8% SLA compliance</strong> in a regulated enterprise environment.</li>
-              <li>Recovered <strong>€5M in procurement variances</strong> for Unilever through root-cause analysis of 3.2M+ records.</li>
-              <li>Engineered the Single Source of Truth Semantic Layer for Unilever's Power BI platform consolidating 14 supplier categories — <strong>100% data consistency</strong> across all reporting teams.</li>
-              <li>Progressed from intern to SME in 3 years through independent delivery across a cross-functional team of 5.</li>
+              <li>1. Progressed from intern to Subject Matter Expert within 3 years — independently owned end-to-end data engineering delivery for <strong>6 Unilever reporting services (ESRA, ISCA, FACT, MIP, EPOS, IPA)</strong> covering European sales, forecast accuracy, procurement, and point-of-sale data.</li>
+              <li>2. Identified and resolved data privacy violations in P&G's campaign pipeline — wrote targeted SQL checks to detect opted-out consumers still receiving marketing campaigns, preventing thousands of dollars in regulatory penalty costs and eliminating a recurring compliance risk.</li>
+              <li>3. Automated removal of expired marketing programme data from P&G's EDW tables using Shell scripting — eliminating a manual weekly process and increasing team operational efficiency by <strong>20%</strong> within the first year.</li>
+              <li>4. Optimised 200+ high-CPU batch jobs for Unilever's reporting platform — applied advanced SQL techniques including stats collection, join index removal, and volatile table substitution, reducing critical SLA job runtimes by <strong>85% from 6 hours to under 1 hour</strong>.</li>
+              <li>5. Built an automated duplicate detection tool for Unilever's data ingestion pipelines — proactively identified duplicate records before they reached production tables, preventing job failures and increasing delivery reliability by <strong>40%</strong>.</li>
+              <li>6. Took initiative to develop a sanity check job in TWS with BTEQ record count validation across all ETL target tables — addressing recurring data and amount mismatch issues reported by business users, catching load failures before client impact and improving service delivery efficiency by <strong>50%</strong>.</li>
+              <li>7. Performed root cause analysis on procurement, media spend, and logistics data issues across 6 Unilever reporting services — resolving recurring invoice and spend amount mismatches totalling approximately <strong>€1M</strong> over tenure across European sales and forecast accuracy reports.</li>
+
             </ul>
             <div class="exp-tags"><span class="exp-tag">Teradata</span><span class="exp-tag">SQL</span><span class="exp-tag">PySpark</span><span class="exp-tag">Power BI</span><span class="exp-tag">Shell Scripting</span><span class="exp-tag">Data Quality</span></div>
           </div>
