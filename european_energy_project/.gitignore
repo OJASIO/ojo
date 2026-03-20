@@ -1,0 +1,38 @@
+# Environment variables
+.env
+
+# Aiven SSL certificates - never commit these
+certs/
+security_files/
+*.pem
+*.key
+*.cert
+
+# Streamlit secrets - never commit
+.streamlit/secrets.toml
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Zip files
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
