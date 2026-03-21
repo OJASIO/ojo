@@ -259,81 +259,6 @@
   .exp-tags { display: flex; flex-wrap: wrap; gap: 0.32rem; margin-top: 0.82rem; }
   .exp-tag { font-size: 0.67rem; padding: 0.17rem 0.52rem; border: 1px solid var(--rule); border-radius: 20px; color: var(--ink-3); background: var(--bg-soft); }
 
-  /* ── EXPERIENCE MODAL CARDS ── */
-  .exp-cards-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem;
-  }
-  .exp-card {
-    background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 14px;
-    padding: 1.4rem 1.5rem; cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-    display: flex; flex-direction: column; gap: 0.6rem;
-  }
-  .exp-card:hover {
-    border-color: #a855f7;
-    box-shadow: 0 6px 24px rgba(124,58,237,0.12);
-    transform: translateY(-3px);
-  }
-  .exp-card-period {
-    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--ink-3);
-  }
-  .exp-card-role {
-    font-family: var(--serif); font-size: 1rem; color: var(--ink); line-height: 1.25;
-  }
-  .exp-card-company {
-    font-size: 0.78rem; font-weight: 600;
-    background: var(--grad-text);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  }
-  .exp-card-location {
-    font-size: 0.72rem; color: var(--ink-3); margin-top: 0.1rem;
-  }
-  .exp-card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
-  .exp-card-cta {
-    margin-top: auto; padding-top: 0.9rem;
-    font-size: 0.75rem; font-weight: 600; color: #7c3aed;
-    display: flex; align-items: center; gap: 0.3rem;
-  }
-  .exp-card-cta svg { width: 13px; height: 13px; stroke: #7c3aed; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s; }
-  .exp-card:hover .exp-card-cta svg { transform: translateX(3px); }
-
-  /* ── MODAL OVERLAY ── */
-  .exp-modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 500;
-    background: rgba(26,22,37,0.55); backdrop-filter: blur(6px);
-    align-items: center; justify-content: center; padding: 1.5rem;
-  }
-  .exp-modal-overlay.open { display: flex; animation: modalFadeIn 0.25s ease; }
-  @keyframes modalFadeIn { from { opacity:0 } to { opacity:1 } }
-  .exp-modal {
-    background: var(--bg-card); border-radius: 18px; border: 1px solid var(--rule);
-    width: 100%; max-width: 680px; max-height: 88vh;
-    overflow-y: auto; padding: 2rem 2.2rem;
-    animation: modalSlideUp 0.28s ease;
-    position: relative;
-  }
-  @keyframes modalSlideUp { from { opacity:0; transform:translateY(20px) } to { opacity:1; transform:translateY(0) } }
-  .exp-modal-close {
-    position: absolute; top: 1.1rem; right: 1.2rem;
-    width: 32px; height: 32px; border-radius: 50%;
-    border: 1px solid var(--rule); background: var(--bg-soft);
-    cursor: pointer; display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .exp-modal-close:hover { background: var(--accent-lt); border-color: #a855f7; }
-  .exp-modal-close svg { width: 14px; height: 14px; stroke: var(--ink-3); fill: none; stroke-width: 2; stroke-linecap: round; }
-  .exp-modal-period { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.35rem; }
-  .exp-modal-role { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); line-height: 1.2; margin-bottom: 0.2rem; }
-  .exp-modal-company { font-size: 0.85rem; font-weight: 600; background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.15rem; }
-  .exp-modal-location { font-size: 0.75rem; color: var(--ink-3); margin-bottom: 1.4rem; }
-  .exp-modal-divider { height: 1px; background: var(--rule); margin-bottom: 1.4rem; }
-
-  @media (max-width: 640px) {
-    .exp-cards-grid { grid-template-columns: 1fr; }
-    .exp-modal { padding: 1.5rem 1.3rem; }
-  }
-
   /* projects */
   .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
   .project-card { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 14px; padding: 1.4rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
@@ -418,7 +343,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#cca5a2a8b9a0a7adbea3a6adbffcf48caba1ada5a0e2afa3a1" class="nav-cta">Get in touch</a>
+  <a href="mailto:indulkarojas08@gmail.com" class="nav-cta">Get in touch</a>
 </nav>
 
 <!-- HERO -->
@@ -462,7 +387,7 @@
       <a href="https://linkedin.com/in/ojasindulkar" target="_blank" rel="noopener" class="hero-social-btn" title="LinkedIn">
         <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="/cdn-cgi/l/email-protection#adc4c3c9d8c1c6ccdfc2c7ccde9d95edcac0ccc4c183cec2c0" class="hero-social-btn" title="Email">
+      <a href="mailto:indulkarojas08@gmail.com" class="hero-social-btn" title="Email">
         <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       </a>
     </div>
@@ -528,140 +453,54 @@
     </div>
 
     <div class="tab-panel active" id="panel-experience">
-
-      <!-- 3 clickable experience cards -->
-      <div class="exp-cards-grid">
-
-        <!-- BioMedX card -->
-        <div class="exp-card" onclick="openExpModal('modal-biomedx')">
-          <div class="exp-card-period">Oct 2025 – Mar 2026</div>
-          <div class="exp-card-role">Data Science Case Study</div>
-          <div class="exp-card-company">BioMedX GmbH</div>
-          <div class="exp-card-location">Heidelberg, Germany</div>
-          <div class="exp-card-tags">
-            <span class="exp-tag">Python</span>
-            <span class="exp-tag">ML</span>
-            <span class="exp-tag">Time-Series</span>
-            <span class="exp-tag">Signal Processing</span>
-          </div>
-          <div class="exp-card-cta">
-            View details
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-date">Oct 2025 – Mar 2026<br><span>Heidelberg, DE</span></div>
+          <div>
+            <div class="exp-role">Data Science Case Study</div>
+            <div class="exp-company">BioMedX GmbH</div>
+            <ul class="exp-bullets">
+              <li>Identified that BioMedX's biosensor baseline calculation relied entirely on manual inspection consuming 3–4 hours per experiment — led the technical development of a Python diagnostic pipeline (Holt smoothing + Savitzky–Golay filtering) reducing baseline calculation time to <strong>50</strong> minutes, enabling drug injection events to follow immediately after model training.</li>
+              <li>Engineered a hybrid ML model combining exponential decay and Facebook Prophet to automate baseline drift prediction and injection event monitoring end-to-end — achieving <strong>95%</strong> accuracy and MAE of <strong>0.05</strong>, eliminating all manual signal inspection from the clinical workflow.</li>
+              <li>Delivered full technical documentation enabling zero-handover reproducibility — the pipeline received official confirmation of internal adoption by the BioMedX research team within the project timeline.</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">Python</span><span class="exp-tag">Facebook Prophet</span><span class="exp-tag">Signal Processing</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Time-Series</span></div>
           </div>
         </div>
-
-        <!-- Yubi card -->
-        <div class="exp-card" onclick="openExpModal('modal-yubi')">
-          <div class="exp-card-period">Jun 2022 – Aug 2024</div>
-          <div class="exp-card-role">Senior Data Engineer & Consultant</div>
-          <div class="exp-card-company">Yubi & SpanIdea Systems</div>
-          <div class="exp-card-location">Mumbai, India</div>
-          <div class="exp-card-tags">
-            <span class="exp-tag">AWS</span>
-            <span class="exp-tag">Kafka</span>
-            <span class="exp-tag">Airflow</span>
-            <span class="exp-tag">Python</span>
-            <span class="exp-tag">SQL</span>
-          </div>
-          <div class="exp-card-cta">
-            View details
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div class="exp-item">
+          <div class="exp-date">Jun 2022 – Aug 2024<br><span>Mumbai, India</span></div>
+          <div>
+            <div class="exp-role">Senior Data Engineer & Consultant</div>
+            <div class="exp-company">Yubi & SpanIdea Systems</div>
+            <ul class="exp-bullets">
+              <li>Migrated loan reporting infrastructure for SBI and Axis Bank to private AWS for regulatory compliance — architected a date-based query routing layer (live data lake for current-date, Redshift for T-1 historical), resolving mid-migration failures and ensuring uninterrupted report delivery throughout cutover.</li>
+              <li>Built the CIR auto-commentary pipeline from scratch covering 5,000+ listed companies — extracted corporate shareholding data from Yubi's subsidiary Corpository, staged across MongoDB and Athena, and fed a clean data stream to the MLOps credit intelligence model, fully replacing a manual analyst process.</li>
+              <li>Engineered a Kafka-based streaming pipeline replacing batch-delayed loan portfolio reporting — continuously extracted from the data lake and loaded into Redshift, reducing reporting lag from several hours to near real-time for multiple lender clients.</li>
+              <li>Took ownership of onboarding new team members through structured knowledge transfer sessions and introduced a product approval gate eliminating infeasible development requests — saving the team <strong>approximately 40 hours per month</strong> in wasted engineering effort and improving pipeline delivery reliability.</li>
+              <li>Standardised report pipeline templates and automated recurring client onboarding steps in Python — reducing new lender report onboarding time <strong>from 2–3 weeks to 2 days</strong>, enabling the team to scale integrations without additional headcount.</li>
+              <li>Introduced proactive data quality monitoring across critical reporting pipelines — identified and resolved recurring code-level bugs before client impact, reducing data quality support tickets by <strong>40%</strong>.</li>
+              <li>Automated MIS and loan summary reports previously handled manually by the operations team via Python and Airflow — eliminating 15+ hours of weekly manual effort and increasing team efficiency by <strong>35%</strong>.</li>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">SQL</span><span class="exp-tag">Python</span><span class="exp-tag">AWS</span><span class="exp-tag">Airflow</span><span class="exp-tag">Kafka</span><span class="exp-tag">Tableau</span><span class="exp-tag">CI/CD</span></div>
           </div>
         </div>
+        <div class="exp-item">
+          <div class="exp-date">Sep 2019 – Jun 2022<br><span>Mumbai, India</span></div>
+          <div>
+            <div class="exp-role">Data Engineer → Subject Matter Expert</div>
+            <div class="exp-company">Teradata India</div>
+            <ul class="exp-bullets">
+              <li>Progressed from intern to Subject Matter Expert within 3 years — independently owned end-to-end data engineering delivery for <strong>6 Unilever reporting services (ESRA, ISCA, FACT, MIP, EPOS, IPA)</strong> covering European sales, forecast accuracy, procurement, and point-of-sale data.</li>
+              <li>Identified and resolved data privacy violations in P&G's campaign pipeline — wrote targeted SQL checks to detect opted-out consumers still receiving marketing campaigns, preventing thousands of dollars in regulatory penalty costs and eliminating a recurring compliance risk.</li>
+              <li>Automated removal of expired marketing programme data from P&G's EDW tables using Shell scripting — eliminating a manual weekly process and increasing team operational efficiency by <strong>20%</strong> within the first year.</li>
+              <li>Optimised 200+ high-CPU batch jobs for Unilever's reporting platform — applied advanced SQL techniques including stats collection, join index removal, and volatile table substitution, reducing critical SLA job runtimes by <strong>85% from 6 hours to under 1 hour</strong>.</li>
+              <li>Built an automated duplicate detection tool for Unilever's data ingestion pipelines — proactively identified duplicate records before they reached production tables, preventing job failures and increasing delivery reliability by <strong>40%</strong>.</li>
+              <li>Took initiative to develop a sanity check job in TWS with BTEQ record count validation across all ETL target tables — addressing recurring data and amount mismatch issues reported by business users, catching load failures before client impact and improving service delivery efficiency by <strong>50%</strong>.</li>
+              <li>Performed root cause analysis on procurement, media spend, and logistics data issues across 6 Unilever reporting services — resolving recurring invoice and spend amount mismatches totalling approximately <strong>€1M</strong> over tenure across European sales and forecast accuracy reports.</li>
 
-        <!-- Teradata card -->
-        <div class="exp-card" onclick="openExpModal('modal-teradata')">
-          <div class="exp-card-period">Sep 2019 – Jun 2022</div>
-          <div class="exp-card-role">Data Engineer → Subject Matter Expert</div>
-          <div class="exp-card-company">Teradata India</div>
-          <div class="exp-card-location">Mumbai, India</div>
-          <div class="exp-card-tags">
-            <span class="exp-tag">Teradata</span>
-            <span class="exp-tag">SQL</span>
-            <span class="exp-tag">PySpark</span>
-            <span class="exp-tag">Shell Scripting</span>
+            </ul>
+            <div class="exp-tags"><span class="exp-tag">Teradata</span><span class="exp-tag">SQL</span><span class="exp-tag">PySpark</span><span class="exp-tag">Power BI</span><span class="exp-tag">Shell Scripting</span><span class="exp-tag">Data Quality</span></div>
           </div>
-          <div class="exp-card-cta">
-            View details
-            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ── MODALS ── -->
-
-    <!-- BioMedX modal -->
-    <div class="exp-modal-overlay" id="modal-biomedx" onclick="closeExpModal(event, this)">
-      <div class="exp-modal">
-        <button class="exp-modal-close" onclick="closeExpModalById('modal-biomedx')">
-          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="exp-modal-period">Oct 2025 – Mar 2026 · Heidelberg, Germany</div>
-        <div class="exp-modal-role">Data Science Case Study</div>
-        <div class="exp-modal-company">BioMedX GmbH</div>
-        <div class="exp-modal-location">Life Sciences Research · Heidelberg, DE</div>
-        <div class="exp-modal-divider"></div>
-        <ul class="exp-bullets">
-          <li>Identified that BioMedX's biosensor baseline calculation relied entirely on manual inspection consuming 3–4 hours per experiment — led the technical development of a Python diagnostic pipeline (Holt smoothing + Savitzky–Golay filtering) reducing baseline calculation time to <strong>50 minutes</strong>, enabling drug injection events to follow immediately after model training.</li>
-          <li>Engineered a hybrid ML model combining exponential decay and Facebook Prophet to automate baseline drift prediction and injection event monitoring end-to-end — achieving <strong>95% accuracy</strong> and MAE of <strong>0.05</strong>, eliminating all manual signal inspection from the clinical workflow.</li>
-          <li>Delivered full technical documentation enabling zero-handover reproducibility — the pipeline received official confirmation of internal adoption by the BioMedX research team within the project timeline.</li>
-        </ul>
-        <div class="exp-tags" style="margin-top: 1.2rem;">
-          <span class="exp-tag">Python</span><span class="exp-tag">Facebook Prophet</span><span class="exp-tag">Signal Processing</span><span class="exp-tag">Scikit-learn</span><span class="exp-tag">Time-Series</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Yubi modal -->
-    <div class="exp-modal-overlay" id="modal-yubi" onclick="closeExpModal(event, this)">
-      <div class="exp-modal">
-        <button class="exp-modal-close" onclick="closeExpModalById('modal-yubi')">
-          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="exp-modal-period">Jun 2022 – Aug 2024 · Mumbai, India</div>
-        <div class="exp-modal-role">Senior Data Engineer & Consultant</div>
-        <div class="exp-modal-company">Yubi & SpanIdea Systems</div>
-        <div class="exp-modal-location">Banking & Financial Services · Mumbai, India</div>
-        <div class="exp-modal-divider"></div>
-        <ul class="exp-bullets">
-          <li>Migrated loan reporting infrastructure for SBI and Axis Bank to private AWS for regulatory compliance — architected a date-based query routing layer (live data lake for current-date, Redshift for T-1 historical), resolving mid-migration failures and ensuring uninterrupted report delivery throughout cutover.</li>
-          <li>Built the CIR auto-commentary pipeline from scratch covering 5,000+ listed companies — extracted corporate shareholding data from Yubi's subsidiary Corpository, staged across MongoDB and Athena, and fed a clean data stream to the MLOps credit intelligence model, fully replacing a manual analyst process.</li>
-          <li>Engineered a Kafka-based streaming pipeline replacing batch-delayed loan portfolio reporting — continuously extracted from the data lake and loaded into Redshift, reducing reporting lag from several hours to near real-time for multiple lender clients.</li>
-          <li>Took ownership of onboarding new team members through structured knowledge transfer sessions and introduced a product approval gate eliminating infeasible development requests — saving the team <strong>approximately 40 hours per month</strong> in wasted engineering effort and improving pipeline delivery reliability.</li>
-          <li>Standardised report pipeline templates and automated recurring client onboarding steps in Python — reducing new lender report onboarding time <strong>from 2–3 weeks to 2 days</strong>, enabling the team to scale integrations without additional headcount.</li>
-          <li>Introduced proactive data quality monitoring across critical reporting pipelines — identified and resolved recurring code-level bugs before client impact, reducing data quality support tickets by <strong>40%</strong>.</li>
-          <li>Automated MIS and loan summary reports previously handled manually by the operations team via Python and Airflow — eliminating 15+ hours of weekly manual effort and increasing team efficiency by <strong>35%</strong>.</li>
-        </ul>
-        <div class="exp-tags" style="margin-top: 1.2rem;">
-          <span class="exp-tag">SQL</span><span class="exp-tag">Python</span><span class="exp-tag">AWS</span><span class="exp-tag">Airflow</span><span class="exp-tag">Kafka</span><span class="exp-tag">Tableau</span><span class="exp-tag">CI/CD</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Teradata modal -->
-    <div class="exp-modal-overlay" id="modal-teradata" onclick="closeExpModal(event, this)">
-      <div class="exp-modal">
-        <button class="exp-modal-close" onclick="closeExpModalById('modal-teradata')">
-          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-        <div class="exp-modal-period">Sep 2019 – Jun 2022 · Mumbai, India</div>
-        <div class="exp-modal-role">Data Engineer → Subject Matter Expert</div>
-        <div class="exp-modal-company">Teradata India</div>
-        <div class="exp-modal-location">FMCG Data Analytics · Mumbai, India</div>
-        <div class="exp-modal-divider"></div>
-        <ul class="exp-bullets">
-          <li>Progressed from intern to Subject Matter Expert within 3 years — independently owned end-to-end data engineering delivery for <strong>6 Unilever reporting services (ESRA, ISCA, FACT, MIP, EPOS, IPA)</strong> covering European sales, forecast accuracy, procurement, and point-of-sale data.</li>
-          <li>Identified and resolved data privacy violations in P&G's campaign pipeline — wrote targeted SQL checks to detect opted-out consumers still receiving marketing campaigns, preventing thousands of dollars in regulatory penalty costs and eliminating a recurring compliance risk.</li>
-          <li>Automated removal of expired marketing programme data from P&G's EDW tables using Shell scripting — eliminating a manual weekly process and increasing team operational efficiency by <strong>20%</strong> within the first year.</li>
-          <li>Optimised 200+ high-CPU batch jobs for Unilever's reporting platform — applied advanced SQL techniques including stats collection, join index removal, and volatile table substitution, reducing critical SLA job runtimes by <strong>85% from 6 hours to under 1 hour</strong>.</li>
-          <li>Built an automated duplicate detection tool for Unilever's data ingestion pipelines — proactively identified duplicate records before they reached production tables, preventing job failures and increasing delivery reliability by <strong>40%</strong>.</li>
-          <li>Took initiative to develop a sanity check job in TWS with BTEQ record count validation across all ETL target tables — addressing recurring data and amount mismatch issues reported by business users, catching load failures before client impact and improving service delivery efficiency by <strong>50%</strong>.</li>
-          <li>Performed root cause analysis on procurement, media spend, and logistics data issues across 6 Unilever reporting services — resolving recurring invoice and spend amount mismatches totalling approximately <strong>€1M</strong> over tenure.</li>
-        </ul>
-        <div class="exp-tags" style="margin-top: 1.2rem;">
-          <span class="exp-tag">Teradata</span><span class="exp-tag">SQL</span><span class="exp-tag">PySpark</span><span class="exp-tag">Power BI</span><span class="exp-tag">Shell Scripting</span><span class="exp-tag">Data Quality</span>
         </div>
       </div>
     </div>
@@ -741,7 +580,7 @@
         <h3 style="font-size: 0.97rem; font-weight: 600; margin-bottom: 1.3rem; color: var(--ink);">Let's Connect</h3>
         <div class="contact-info-item">
           <div class="contact-info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-          <div><div class="contact-info-label">Email</div><a href="/cdn-cgi/l/email-protection#721b1c16071e1913001d181301424a32151f131b1e5c111d1f" class="contact-info-value"><span class="__cf_email__" data-cfemail="345d5a5041585f55465b5e5547040c745359555d581a575b59">[email&#160;protected]</span></a></div>
+          <div><div class="contact-info-label">Email</div><a href="mailto:indulkarojas08@gmail.com" class="contact-info-value">indulkarojas08@gmail.com</a></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
@@ -788,7 +627,7 @@
   </div>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); });
 
@@ -801,29 +640,6 @@
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function openExpModal(id) {
-    document.getElementById(id).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeExpModal(event, overlay) {
-    if (event.target === overlay) {
-      overlay.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  }
-  function closeExpModalById(id) {
-    document.getElementById(id).classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.exp-modal-overlay.open').forEach(m => {
-        m.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    }
-  });
 
   function switchTab(name, btn) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
@@ -856,4 +672,9 @@
       status.style.display = 'block'; status.style.color = '#e11d48';
       status.textContent = 'Something went wrong. Please email indulkarojas08@gmail.com directly.';
       btn.disabled = false;
-      
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;flex-shrink:0;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2" fill="white" stroke="none"/></svg> Send Message`;
+    }
+  }
+</script>
+</body>
+</html>
