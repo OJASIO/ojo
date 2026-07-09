@@ -1,0 +1,28 @@
+{
+    "topics": [
+        "Topic 0: der / und / kfw / zu / werden / ein / der kfw / von / für / sein",
+        "Topic 1: growth / 2024 / oecd / country / rate / inflation / price / policy / labour / global",
+        "Topic 2: eur / mio / mio eur / eur mio / aus / 31 12 / mrd / mrd eur / 31 / 12",
+        "Topic 3: ai / shall / risk / article / high risk / regulation / risk ai / provider / authority / eu",
+        "Topic 4: ra / lu / tio / ric / ta / rc / ic / rn / la / rt",
+        "Topic 5: oecd / https / org / doi / org 10 / doi org / https doi / 10 / 1787 / 10 1787",
+        "Topic 6: education / student / secondary / teacher / country / level / tertiary / primary / school / year",
+        "Topic 7: occupation / green / job / skill / worker / green drive / drive / transition / emission / drive occupation",
+        "Topic 8: 10 / 11 / 12 / 13 / mm / 20 / 16 / 15 / 18 / 14",
+        "Topic 9: der / bundesbank / deutsch bundesbank / deutsch / der deutsch / geschäftsbericht / jahresabschluss / bundesbank geschäftsbericht / der bundesbank / jahr"
+    ],
+    "n_chunks": 12063,
+    "topic_model_type": "NMF",
+    "embedding_models": [
+        "SBERT/all-MiniLM-L6-v2",
+        "TF-IDF"
+    ],
+    "embedding_plots_saved": [
+        "results/plots\\sbert_t_sne.png",
+        "results/plots\\tfidf_pca.png"
+    ],
+    "document_topic_matrix_shape": [
+        12063,
+        10
+    ]
+}

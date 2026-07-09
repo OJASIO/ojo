@@ -1,0 +1,15 @@
+{
+    "architecture": "Hybrid vs. GraphRAG Retrieval Quality (Document Ranking)",
+    "evaluation_query": "Compare social safety nets recommended by IMF and OECD...",
+    "metrics": {
+        "Hybrid RAG (Baseline)": {
+            "NDCG@10": 0.5406255353033333,
+            "MRR@10": 0.2
+        },
+        "GraphRAG (Advanced)": {
+            "NDCG@10": 0.9890862835774268,
+            "MRR@10": 1.0
+        }
+    },
+    "plot_path": "results/plots/ranking_relevance_comparison.png"
+}

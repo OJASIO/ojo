@@ -1,0 +1,9 @@
+{
+    "original_query": "Compare fiscal strategies for financing climate and social protection goals across OECD, IMF, and UNCTAD documents. Identify points of convergence and divergence using multi-hop retrieval.",
+    "language": "en",
+    "sub_queries": {
+        "What fiscal strategies do OECD, IMF, and UNCTAD documents propose for financing climate goals, and how do these strategies address or impact innovation in green technologies?": [],
+        "According to OECD, IMF, and UNCTAD documents, what fiscal strategies are recommended for financing social protection goals, specifically concerning their impact on employment protection and labor market transitions?": [],
+        "How do OECD, IMF, and UNCTAD documents discuss fiscal strategies for social protection and climate goals in relation to achieving or hindering health equity, and what are the proposed financing mechanisms?": []
+    }
+}

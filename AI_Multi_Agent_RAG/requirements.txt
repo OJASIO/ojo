@@ -1,0 +1,26 @@
+### Packages required For  Task 1
+pdfplumber
+langchain
+spacy
+
+#### Packages required for Task 2
+scikit-learn
+numpy
+matplotlib
+scipy
+sentence-transformers
+
+### Packages required for task 3
+pinecone
+rank-bm25
+langchain-core
+
+##Packages required for task 4
+langdetect
+google-genai
+pydantic
+ollama
+matplotlib
+json
+
+networkx

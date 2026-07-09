@@ -1,0 +1,350 @@
+{
+    "embedding_model": "intfloat/multilingual-e5-large",
+    "dimension": 1024,
+    "english_query": {
+        "query": "Compare fiscal strategies for financing climate goals across OECD and IMF documents.",
+        "ablation_results": [
+            {
+                "alpha": 0.2,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Source: Derived from data from Global Financial Safety Net Tracker available at https://www.bu.edu/gdp/\nglobal-financial-safety-net-tracker/. The Bost...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "186",
+                        "language": "en",
+                        "score": 1.01025367
+                    },
+                    {
+                        "text_snippet": "International Tax and Public Finance, Vol. 2/2, pp. 157-183,\nhttps://doi.org/10.1007/bf00877495.\nGrasso, M. (ed.) (2023), “Income-based U.S. household...",
+                        "source": "ac8b3538-en (1).pdf",
+                        "page": "262",
+                        "language": "en",
+                        "score": 1.00776267
+                    },
+                    {
+                        "text_snippet": "to be dedicated to servicing these liabilities Important policy actions on the international\nis further aggravated by tight international sphere inclu...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "34",
+                        "language": "en",
+                        "score": 1.00772333
+                    },
+                    {
+                        "text_snippet": "banks need to tread carefully, taking note of incoming data and thoroughly assessing policy actions. Failing\nto durably contain inflation would only i...",
+                        "source": "d8814e8b-en.pdf",
+                        "page": "10",
+                        "language": "en",
+                        "score": 1.00088906
+                    },
+                    {
+                        "text_snippet": "https://goingdigital.oecd.org/data/notes/No14_ToolkitNote_AIStrategies.pdf.\nNote to Delegations:\nThis document is also available on O.N.E. under the r...",
+                        "source": "No14_ToolkitNote_AIStrategies.pdf",
+                        "page": "1",
+                        "language": "en",
+                        "score": 0.998865604
+                    }
+                ]
+            },
+            {
+                "alpha": 0.4,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Source: Derived from data from Global Financial Safety Net Tracker available at https://www.bu.edu/gdp/\nglobal-financial-safety-net-tracker/. The Bost...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "186",
+                        "language": "en",
+                        "score": 1.01025367
+                    },
+                    {
+                        "text_snippet": "International Tax and Public Finance, Vol. 2/2, pp. 157-183,\nhttps://doi.org/10.1007/bf00877495.\nGrasso, M. (ed.) (2023), “Income-based U.S. household...",
+                        "source": "ac8b3538-en (1).pdf",
+                        "page": "262",
+                        "language": "en",
+                        "score": 1.00776267
+                    },
+                    {
+                        "text_snippet": "to be dedicated to servicing these liabilities Important policy actions on the international\nis further aggravated by tight international sphere inclu...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "34",
+                        "language": "en",
+                        "score": 1.00772333
+                    },
+                    {
+                        "text_snippet": "banks need to tread carefully, taking note of incoming data and thoroughly assessing policy actions. Failing\nto durably contain inflation would only i...",
+                        "source": "d8814e8b-en.pdf",
+                        "page": "10",
+                        "language": "en",
+                        "score": 1.00088906
+                    },
+                    {
+                        "text_snippet": "https://goingdigital.oecd.org/data/notes/No14_ToolkitNote_AIStrategies.pdf.\nNote to Delegations:\nThis document is also available on O.N.E. under the r...",
+                        "source": "No14_ToolkitNote_AIStrategies.pdf",
+                        "page": "1",
+                        "language": "en",
+                        "score": 0.998865604
+                    }
+                ]
+            },
+            {
+                "alpha": 0.6,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Source: Derived from data from Global Financial Safety Net Tracker available at https://www.bu.edu/gdp/\nglobal-financial-safety-net-tracker/. The Bost...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "186",
+                        "language": "en",
+                        "score": 1.01025367
+                    },
+                    {
+                        "text_snippet": "International Tax and Public Finance, Vol. 2/2, pp. 157-183,\nhttps://doi.org/10.1007/bf00877495.\nGrasso, M. (ed.) (2023), “Income-based U.S. household...",
+                        "source": "ac8b3538-en (1).pdf",
+                        "page": "262",
+                        "language": "en",
+                        "score": 1.00776267
+                    },
+                    {
+                        "text_snippet": "to be dedicated to servicing these liabilities Important policy actions on the international\nis further aggravated by tight international sphere inclu...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "34",
+                        "language": "en",
+                        "score": 1.00772333
+                    },
+                    {
+                        "text_snippet": "banks need to tread carefully, taking note of incoming data and thoroughly assessing policy actions. Failing\nto durably contain inflation would only i...",
+                        "source": "d8814e8b-en.pdf",
+                        "page": "10",
+                        "language": "en",
+                        "score": 1.00088906
+                    },
+                    {
+                        "text_snippet": "https://goingdigital.oecd.org/data/notes/No14_ToolkitNote_AIStrategies.pdf.\nNote to Delegations:\nThis document is also available on O.N.E. under the r...",
+                        "source": "No14_ToolkitNote_AIStrategies.pdf",
+                        "page": "1",
+                        "language": "en",
+                        "score": 0.998865604
+                    }
+                ]
+            },
+            {
+                "alpha": 0.8,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Source: Derived from data from Global Financial Safety Net Tracker available at https://www.bu.edu/gdp/\nglobal-financial-safety-net-tracker/. The Bost...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "186",
+                        "language": "en",
+                        "score": 1.01025367
+                    },
+                    {
+                        "text_snippet": "International Tax and Public Finance, Vol. 2/2, pp. 157-183,\nhttps://doi.org/10.1007/bf00877495.\nGrasso, M. (ed.) (2023), “Income-based U.S. household...",
+                        "source": "ac8b3538-en (1).pdf",
+                        "page": "262",
+                        "language": "en",
+                        "score": 1.00776267
+                    },
+                    {
+                        "text_snippet": "to be dedicated to servicing these liabilities Important policy actions on the international\nis further aggravated by tight international sphere inclu...",
+                        "source": "tdr2024_en.pdf",
+                        "page": "34",
+                        "language": "en",
+                        "score": 1.00772333
+                    },
+                    {
+                        "text_snippet": "banks need to tread carefully, taking note of incoming data and thoroughly assessing policy actions. Failing\nto durably contain inflation would only i...",
+                        "source": "d8814e8b-en.pdf",
+                        "page": "10",
+                        "language": "en",
+                        "score": 1.00088906
+                    },
+                    {
+                        "text_snippet": "https://goingdigital.oecd.org/data/notes/No14_ToolkitNote_AIStrategies.pdf.\nNote to Delegations:\nThis document is also available on O.N.E. under the r...",
+                        "source": "No14_ToolkitNote_AIStrategies.pdf",
+                        "page": "1",
+                        "language": "en",
+                        "score": 0.998865604
+                    }
+                ]
+            }
+        ]
+    },
+    "german_query": {
+        "query": "Wie bewertet die Bundesbank die Inflationsentwicklung in Deutschland?",
+        "ablation_results": [
+            {
+                "alpha": 0.2,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Szenarien bewertet, wie sich unterschiedliche handelspolitische Maßnahmen auf die\nInflationsentwicklung auswirken. Demnach würde eine Verschärfung der...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.36182976
+                    },
+                    {
+                        "text_snippet": "Wie beeinflusst ein Anstieg des Goldpreises die Ertragslage der\nBundesbank, insbesondere im Hinblick auf ihre bedeutenden\nGoldreserven?\nDie Bundesbank...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "24",
+                        "language": "de",
+                        "score": 1.14440012
+                    },
+                    {
+                        "text_snippet": "auswirken.\nDer EZB-Rat stuft die aktuelle Unsicherheit als außergewöhnlich hoch ein und\nbekräftigt damit erneut seinen datenabhängigen Ansatz.\n5. Juni...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.13405538
+                    },
+                    {
+                        "text_snippet": "Bundesbank im eigenen Geschäftsbetrieb zum nachhaltigen Umgang mit endlichen\nRessourcen an. Die erfolgreiche Umsetzung dieser Anregungen spiegelt sich...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "47",
+                        "language": "de",
+                        "score": 1.09064388
+                    },
+                    {
+                        "text_snippet": "Stützend wirkten hingegen die Normalisierung der Lieferketten, die hohen\nAuftragsbestände in Industrie und Bau sowie der nach wie vor stabile Ar-\nbeit...",
+                        "source": "Geschaeftsbericht-2023.pdf",
+                        "page": "10",
+                        "language": "de",
+                        "score": 1.08757532
+                    }
+                ]
+            },
+            {
+                "alpha": 0.4,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Szenarien bewertet, wie sich unterschiedliche handelspolitische Maßnahmen auf die\nInflationsentwicklung auswirken. Demnach würde eine Verschärfung der...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.36182976
+                    },
+                    {
+                        "text_snippet": "Wie beeinflusst ein Anstieg des Goldpreises die Ertragslage der\nBundesbank, insbesondere im Hinblick auf ihre bedeutenden\nGoldreserven?\nDie Bundesbank...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "24",
+                        "language": "de",
+                        "score": 1.14440012
+                    },
+                    {
+                        "text_snippet": "auswirken.\nDer EZB-Rat stuft die aktuelle Unsicherheit als außergewöhnlich hoch ein und\nbekräftigt damit erneut seinen datenabhängigen Ansatz.\n5. Juni...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.13405538
+                    },
+                    {
+                        "text_snippet": "Bundesbank im eigenen Geschäftsbetrieb zum nachhaltigen Umgang mit endlichen\nRessourcen an. Die erfolgreiche Umsetzung dieser Anregungen spiegelt sich...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "47",
+                        "language": "de",
+                        "score": 1.09064388
+                    },
+                    {
+                        "text_snippet": "Stützend wirkten hingegen die Normalisierung der Lieferketten, die hohen\nAuftragsbestände in Industrie und Bau sowie der nach wie vor stabile Ar-\nbeit...",
+                        "source": "Geschaeftsbericht-2023.pdf",
+                        "page": "10",
+                        "language": "de",
+                        "score": 1.08757532
+                    }
+                ]
+            },
+            {
+                "alpha": 0.6,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Szenarien bewertet, wie sich unterschiedliche handelspolitische Maßnahmen auf die\nInflationsentwicklung auswirken. Demnach würde eine Verschärfung der...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.36182976
+                    },
+                    {
+                        "text_snippet": "Wie beeinflusst ein Anstieg des Goldpreises die Ertragslage der\nBundesbank, insbesondere im Hinblick auf ihre bedeutenden\nGoldreserven?\nDie Bundesbank...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "24",
+                        "language": "de",
+                        "score": 1.14440012
+                    },
+                    {
+                        "text_snippet": "auswirken.\nDer EZB-Rat stuft die aktuelle Unsicherheit als außergewöhnlich hoch ein und\nbekräftigt damit erneut seinen datenabhängigen Ansatz.\n5. Juni...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.13405538
+                    },
+                    {
+                        "text_snippet": "Bundesbank im eigenen Geschäftsbetrieb zum nachhaltigen Umgang mit endlichen\nRessourcen an. Die erfolgreiche Umsetzung dieser Anregungen spiegelt sich...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "47",
+                        "language": "de",
+                        "score": 1.09064388
+                    },
+                    {
+                        "text_snippet": "Stützend wirkten hingegen die Normalisierung der Lieferketten, die hohen\nAuftragsbestände in Industrie und Bau sowie der nach wie vor stabile Ar-\nbeit...",
+                        "source": "Geschaeftsbericht-2023.pdf",
+                        "page": "10",
+                        "language": "de",
+                        "score": 1.08757532
+                    }
+                ]
+            },
+            {
+                "alpha": 0.8,
+                "k": 5,
+                "embedding_model": "multilingual-e5-large",
+                "retrieved_documents": [
+                    {
+                        "text_snippet": "Szenarien bewertet, wie sich unterschiedliche handelspolitische Maßnahmen auf die\nInflationsentwicklung auswirken. Demnach würde eine Verschärfung der...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.36182976
+                    },
+                    {
+                        "text_snippet": "Wie beeinflusst ein Anstieg des Goldpreises die Ertragslage der\nBundesbank, insbesondere im Hinblick auf ihre bedeutenden\nGoldreserven?\nDie Bundesbank...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "24",
+                        "language": "de",
+                        "score": 1.14440012
+                    },
+                    {
+                        "text_snippet": "auswirken.\nDer EZB-Rat stuft die aktuelle Unsicherheit als außergewöhnlich hoch ein und\nbekräftigt damit erneut seinen datenabhängigen Ansatz.\n5. Juni...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "52",
+                        "language": "de",
+                        "score": 1.13405538
+                    },
+                    {
+                        "text_snippet": "Bundesbank im eigenen Geschäftsbetrieb zum nachhaltigen Umgang mit endlichen\nRessourcen an. Die erfolgreiche Umsetzung dieser Anregungen spiegelt sich...",
+                        "source": "Geschaeftsbericht-2025.pdf",
+                        "page": "47",
+                        "language": "de",
+                        "score": 1.09064388
+                    },
+                    {
+                        "text_snippet": "Stützend wirkten hingegen die Normalisierung der Lieferketten, die hohen\nAuftragsbestände in Industrie und Bau sowie der nach wie vor stabile Ar-\nbeit...",
+                        "source": "Geschaeftsbericht-2023.pdf",
+                        "page": "10",
+                        "language": "de",
+                        "score": 1.08757532
+                    }
+                ]
+            }
+        ]
+    }
+}
