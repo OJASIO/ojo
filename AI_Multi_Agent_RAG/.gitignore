@@ -1,0 +1,45 @@
+# Secret files — never commit these
+.env
+*.env
+.env.local
+.env.production
+
+# API keys and credentials
+config_secret.yaml
+secrets.yaml
+credentials.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Large model files
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Large data files
+results/classical_output.json
+Data/*.pdf
+
+# Vector database cache
+chromadb/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hugging Face cache
+.cache/

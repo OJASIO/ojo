@@ -1,0 +1,64 @@
+{
+    "retrieval_params": {
+        "alpha": 0.49999999999999994,
+        "k": 7
+    },
+    "history": [
+        {
+            "timestamp": 1763053064.3071623,
+            "retrieval_params": {
+                "alpha": 0.7,
+                "k": 5
+            },
+            "metrics": {
+                "factually_entailed_count": 3,
+                "total_statements_checked": 7,
+                "entailment_rate": 0.42857142857142855,
+                "guardrail_status": "OK"
+            },
+            "latency_s": 0.0
+        },
+        {
+            "timestamp": 1763056118.3033452,
+            "retrieval_params": {
+                "alpha": 0.7,
+                "k": 6
+            },
+            "metrics": {
+                "factually_entailed_count": 1,
+                "total_statements_checked": 1,
+                "entailment_rate": 1.0,
+                "guardrail_status": "OK"
+            },
+            "latency_s": 0.0
+        },
+        {
+            "timestamp": 1763057478.9520664,
+            "retrieval_params": {
+                "alpha": 0.7,
+                "k": 7
+            },
+            "metrics": {
+                "factually_entailed_count": 4,
+                "total_statements_checked": 4,
+                "entailment_rate": 1.0,
+                "guardrail_status": "OK"
+            },
+            "latency_s": 0.0
+        },
+        {
+            "timestamp": 1783449012.8382163,
+            "retrieval_params": {
+                "alpha": 0.49999999999999994,
+                "k": 7
+            },
+            "metrics": {
+                "factually_entailed_count": 2,
+                "total_statements_checked": 5,
+                "entailment_rate": 0.4,
+                "guardrail_status": "OK"
+            },
+            "latency_s": 0.03958320617675781
+        }
+    ]
+}

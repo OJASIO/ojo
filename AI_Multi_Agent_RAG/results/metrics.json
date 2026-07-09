@@ -1,0 +1,39 @@
+{
+    "guardrail_status": "OK",
+    "verifier_metrics": {
+        "total_statements_checked": 5,
+        "factually_entailed_count": 2,
+        "statement_checks": [
+            {
+                "statement": "- Strict governance frameworks are essential for addressing health data risks associated with AI improvements in diagnostic speed, prioritizing patient privacy and health equity",
+                "citation": "UN_Health_Rpt.pdf p.12",
+                "factual_precision": "FACTUAL_ENTAILED",
+                "temporal_check": "TEMPORAL_NONE"
+            },
+            {
+                "statement": "- Clear guidelines for data collection, storage, and usage, as well as establishing independent oversight bodies to monitor compliance, should be developed to ensure the safe exploration of new AI technologies without compromising patient privacy or health equity",
+                "citation": "UN_Health_Rpt.pdf p.12",
+                "factual_precision": "FACTUAL_ENTAILED",
+                "temporal_check": "TEMPORAL_NONE"
+            },
+            {
+                "statement": "- To drive technological innovation and maintain a competitive edge in the global market, tax credits or grants for companies investing in AI research and development should be implemented",
+                "citation": "OECD_Innovation_2025.pdf p.13",
+                "factual_precision": "FACTUAL_UNVERIFIABLE (Source Missing from Context Map)",
+                "temporal_check": "TEMPORAL_NONE"
+            },
+            {
+                "statement": "- Regulatory sandboxes can be established to test and iterate innovative AI applications while ensuring compliance with privacy regulations, ethical standards, and other safeguards",
+                "citation": "OECD_AI_Regulation_2026.pdf p.19",
+                "factual_precision": "FACTUAL_UNVERIFIABLE (Source Missing from Context Map)",
+                "temporal_check": "TEMPORAL_NONE"
+            },
+            {
+                "statement": "- International collaboration on AI standards, regulations, and best practices is necessary to promote a level playing field for companies operating in multiple countries and ensure that AI development aligns with global values and objectives",
+                "citation": "OECD_AI_International_2027.pdf p.5",
+                "factual_precision": "FACTUAL_UNVERIFIABLE (Source Missing from Context Map)",
+                "temporal_check": "TEMPORAL_NONE"
+            }
+        ]
+    }
+}
