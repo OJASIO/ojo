@@ -9,6 +9,7 @@ from backend.language_detector import detect_language
 from backend.cv_reviewer import review_cv
 from backend.ats_checker import check_ats
 from backend.models import CVReviewResponse
+from fastapi.responses import FileResponse  
 
 app = FastAPI(title="CV Optimizer Agent", version="1.0.0")
 
@@ -34,6 +35,9 @@ def health():
         "supported_formats": ["pdf", "docx"]
     }
 
+@app.get("/app")
+def serve_frontend():
+    return FileResponse("frontend.html")
 
 @app.post("/review-cv")
 async def review_cv_endpoint(file: UploadFile = File(...)):
