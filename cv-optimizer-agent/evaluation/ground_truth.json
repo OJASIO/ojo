@@ -1,0 +1,27 @@
+{
+  "test_cases": [
+    {
+      "id": "mona_plachert",
+      "cv_path": "data/sample_cvs/mona_cv.pdf",
+      "language": "de",
+      "counselor_date": "2026-03-11",
+      "human_tier_1": [
+        "Missing professional photo",
+        "Wrong section order (Kompetenzen before Ausbildung)",
+        "University name capitalisation error (srh should be SRH)",
+        "Primary school should be removed"
+      ],
+      "human_tier_2": [
+        "Missing personal statement",
+        "Motivation for target field not explained",
+        "English certificate unnecessary for most roles",
+        "Grade transcript not included"
+      ],
+      "human_tier_3": [
+        "Career positioning for forensic psychology",
+        "Internship timing and availability",
+        "Reference letter from supervising professor"
+      ]
+    }
+  ]
+}

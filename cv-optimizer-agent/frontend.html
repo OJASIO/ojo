@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Optimizer Agent — SRH Career Service</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f1f5f9; min-height: 100vh; }
+
+    header {
+      background: #1F4E79; color: white;
+      padding: 18px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    header h1 { font-size: 20px; font-weight: 700; }
+    header p  { font-size: 12px; color: #93c5fd; margin-top: 3px; }
+
+    .container { max-width: 780px; margin: 32px auto; padding: 0 16px; }
+
+    .card {
+      background: white; border-radius: 12px;
+      padding: 28px; margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    .drop-zone {
+      border: 2px dashed #cbd5e1; border-radius: 10px;
+      padding: 36px 20px; text-align: center; cursor: pointer;
+      transition: all 0.15s;
+    }
+    .drop-zone:hover, .drop-zone.drag { border-color: #1F4E79; background: #eff6ff; }
+    .drop-zone .icon { font-size: 40px; margin-bottom: 10px; }
+    .drop-zone h3 { font-size: 15px; color: #1e293b; margin-bottom: 4px; }
+    .drop-zone p  { font-size: 12px; color: #94a3b8; }
+    .badges { margin-top: 12px; display: flex; gap: 6px; justify-content: center; }
+    .badge {
+      font-size: 11px; font-weight: 700; padding: 3px 10px;
+      border-radius: 20px; background: #f1f5f9;
+      border: 1px solid #e2e8f0; color: #64748b;
+    }
+
+    .btn {
+      width: 100%; padding: 14px; margin-top: 16px;
+      background: #1F4E79; color: white; border: none;
+      border-radius: 10px; font-size: 15px; font-weight: 700;
+      cursor: pointer; transition: opacity 0.15s;
+    }
+    .btn:disabled { background: #94a3b8; cursor: not-allowed; }
+    .btn:hover:not(:disabled) { opacity: 0.9; }
+
+    .file-selected {
+      margin-top: 12px; padding: 10px 14px;
+      background: #f0fdf4; border: 1px solid #bbf7d0;
+      border-radius: 8px; font-size: 13px; color: #15803d;
+      display: none;
+    }
+
+    .error-msg {
+      margin-top: 12px; padding: 10px 14px;
+      background: #fef2f2; border: 1px solid #fecaca;
+      border-radius: 8px; font-size: 13px; color: #b91c1c;
+      display: none;
+    }
+
+    .results { display: none; }
+
+    .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+
+    .score-box {
+      border-radius: 12px; padding: 20px 16px; text-align: center;
+    }
+    .score-box .label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 6px; color: #64748b;
+    }
+    .score-box .value { font-size: 52px; font-weight: 900; line-height: 1; }
+    .score-box .sub { font-size: 16px; font-weight: 400; color: #94a3b8; }
+
+    .summary-box {
+      background: #f8fafc; border: 1px solid #e2e8f0;
+      border-radius: 10px; padding: 16px; margin-bottom: 16px;
+    }
+    .summary-box .label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: #64748b; margin-bottom: 6px;
+    }
+    .summary-box p { font-size: 14px; color: #334155; line-height: 1.65; }
+
+    .tier-section { border-radius: 12px; margin-bottom: 14px; overflow: hidden; }
+    .tier-header {
+      padding: 13px 16px; display: flex;
+      justify-content: space-between; align-items: center;
+      cursor: pointer; user-select: none;
+    }
+    .tier-header-left { display: flex; align-items: center; gap: 8px; }
+    .tier-title { font-weight: 700; font-size: 13px; }
+    .tier-count {
+      color: white; border-radius: 20px;
+      padding: 1px 9px; font-size: 11px; font-weight: 800;
+    }
+    .tier-body { background: white; padding: 10px 16px 14px; }
+
+    .issue-card {
+      background: #fafafa; border: 1px solid #e2e8f0;
+      border-radius: 8px; padding: 12px 14px; margin-bottom: 8px;
+    }
+    .issue-title { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+    .issue-detail { font-size: 13px; color: #475569; line-height: 1.55; }
+    .issue-fix {
+      margin-top: 8px; border-radius: 6px;
+      padding: 7px 10px; font-size: 12px; line-height: 1.5;
+    }
+    .fix-label {
+      font-size: 11px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    .t3-item {
+      padding: 7px 12px; margin-bottom: 6px;
+      border-left: 3px solid #3b82f6;
+      font-size: 13px; color: #1e40af; line-height: 1.55;
+    }
+    .t3-note {
+      font-size: 12px; color: #64748b;
+      font-style: italic; margin-bottom: 10px;
+    }
+
+    .ats-box {
+      background: #f8fafc; border: 1px solid #e2e8f0;
+      border-radius: 10px; padding: 16px; margin-top: 8px;
+    }
+    .ats-score { font-size: 28px; font-weight: 800; color: #1F4E79; }
+    .ats-issue {
+      display: flex; gap: 8px; align-items: flex-start;
+      padding: 7px 0; border-bottom: 1px solid #f1f5f9;
+      font-size: 13px; color: #475569;
+    }
+    .severity {
+      font-size: 10px; font-weight: 700; padding: 2px 7px;
+      border-radius: 10px; text-transform: uppercase; white-space: nowrap;
+    }
+    .sev-high   { background: #fee2e2; color: #b91c1c; }
+    .sev-medium { background: #fef3c7; color: #92400e; }
+    .sev-low    { background: #e0f2fe; color: #0369a1; }
+
+    .reset-btn {
+      width: 100%; padding: 13px; background: white;
+      color: #1F4E79; border: 2px solid #1F4E79;
+      border-radius: 10px; font-size: 14px; font-weight: 700;
+      cursor: pointer; margin-top: 4px;
+    }
+
+    .loader {
+      text-align: center; padding: 40px;
+      display: none; color: #64748b; font-size: 15px;
+    }
+    .loader .spinner {
+      width: 40px; height: 40px; border: 4px solid #e2e8f0;
+      border-top-color: #1F4E79; border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📄 CV Optimizer Agent</h1>
+    <p>Career Service · SRH University</p>
+  </div>
+  <div style="display:flex;background:rgba(255,255,255,0.12);border-radius:8px;padding:3px;gap:2px">
+    <button onclick="setLang('de')" id="btn-de"
+      style="padding:5px 14px;border-radius:6px;border:none;cursor:pointer;font-weight:700;font-size:12px;background:white;color:#1F4E79">
+      🇩🇪 DE
+    </button>
+    <button onclick="setLang('en')" id="btn-en"
+      style="padding:5px 14px;border-radius:6px;border:none;cursor:pointer;font-weight:700;font-size:12px;background:transparent;color:rgba(255,255,255,0.7)">
+      🇬🇧 EN
+    </button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Upload Section -->
+  <div class="card" id="upload-section">
+    <div class="drop-zone" id="drop-zone">
+      <div class="icon" id="drop-icon">📎</div>
+      <h3 id="drop-title">Drop your CV here or click to upload</h3>
+      <p id="drop-sub">PDF or DOCX files supported</p>
+      <div class="badges">
+        <span class="badge">PDF</span>
+        <span class="badge">DOCX</span>
+      </div>
+      <input type="file" id="file-input" accept=".pdf,.docx" style="display:none">
+    </div>
+
+    <div class="file-selected" id="file-selected"></div>
+    <div class="error-msg" id="error-msg"></div>
+
+    <button class="btn" id="analyse-btn" disabled onclick="analyseCV()">
+      🔍 Analyse CV
+    </button>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="spinner"></div>
+    <div id="loader-text">Analysing CV...</div>
+  </div>
+
+  <!-- Results -->
+  <div class="results" id="results"></div>
+
+</div>
+
+<script>
+  const API = 'http://127.0.0.1:8000/review-cv';
+  let selectedFile = null;
+  let currentLang = 'de';
+
+  const T = {
+    de: {
+      drop: 'Lebenslauf hier ablegen oder klicken',
+      sub: 'PDF oder DOCX werden unterstützt',
+      btn: '🔍 Lebenslauf analysieren',
+      loading: 'Lebenslauf wird analysiert...',
+      score: 'Gesamtbewertung',
+      ready: 'Bereit zur Beratung ✓',
+      notReady: 'Fehler zuerst beheben ✗',
+      summary: 'Zusammenfassung',
+      t1: 'Tier 1 — Kritische Fehler',
+      t2: 'Tier 2 — Verbesserungen',
+      t3: 'Tier 3 — Für die Beratung',
+      t3note: 'Diese Punkte erfordern eine persönliche Karriereberatung',
+      fix: 'Korrektur',
+      ats: 'ATS-Kompatibilität',
+      reset: '← Neuen Lebenslauf analysieren',
+      noFile: 'Bitte zuerst eine Datei auswählen.',
+    },
+    en: {
+      drop: 'Drop your CV here or click to upload',
+      sub: 'PDF or DOCX files supported',
+      btn: '🔍 Analyse CV',
+      loading: 'Analysing CV...',
+      score: 'Overall Score',
+      ready: 'Ready for Counseling ✓',
+      notReady: 'Fix Issues First ✗',
+      summary: 'Summary',
+      t1: 'Tier 1 — Critical Errors',
+      t2: 'Tier 2 — Improvements',
+      t3: 'Tier 3 — For the Counselor',
+      t3note: 'These topics require a personal career counseling session',
+      fix: 'Fix',
+      ats: 'ATS Compatibility',
+      reset: '← Analyse another CV',
+      noFile: 'Please select a file first.',
+    }
+  };
+
+  function setLang(l) {
+    currentLang = l;
+    const t = T[l];
+    document.getElementById('drop-title').textContent = t.drop;
+    document.getElementById('drop-sub').textContent = t.sub;
+    document.getElementById('analyse-btn').textContent = t.btn;
+    document.getElementById('btn-de').style.background = l === 'de' ? 'white' : 'transparent';
+    document.getElementById('btn-de').style.color = l === 'de' ? '#1F4E79' : 'rgba(255,255,255,0.7)';
+    document.getElementById('btn-en').style.background = l === 'en' ? 'white' : 'transparent';
+    document.getElementById('btn-en').style.color = l === 'en' ? '#1F4E79' : 'rgba(255,255,255,0.7)';
+  }
+
+  // File input
+  const fileInput = document.getElementById('file-input');
+  const dropZone  = document.getElementById('drop-zone');
+
+  dropZone.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', e => handleFile(e.target.files[0]));
+  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag'));
+  dropZone.addEventListener('drop', e => {
+    e.preventDefault(); dropZone.classList.remove('drag');
+    handleFile(e.dataTransfer.files[0]);
+  });
+
+  function handleFile(file) {
+    if (!file) return;
+    selectedFile = file;
+    const sel = document.getElementById('file-selected');
+    sel.style.display = 'block';
+    sel.textContent = `✓ ${file.name} selected`;
+    document.getElementById('analyse-btn').disabled = false;
+    document.getElementById('drop-icon').textContent = '📕';
+  }
+
+  async function analyseCV() {
+    const t = T[currentLang];
+    if (!selectedFile) { showError(t.noFile); return; }
+
+    document.getElementById('upload-section').style.display = 'none';
+    document.getElementById('loader').style.display = 'block';
+    document.getElementById('loader-text').textContent = t.loading;
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+
+    try {
+      const res  = await fetch(API, { method: 'POST', body: formData });
+      const data = await res.json();
+      document.getElementById('loader').style.display = 'none';
+      renderResults(data, t);
+    } catch (err) {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('upload-section').style.display = 'block';
+      showError('Could not connect to server. Make sure the backend is running on port 8000.');
+    }
+  }
+
+  function scoreStyle(s) {
+    if (s >= 7) return { text: '#15803d', bg: '#f0fdf4', border: '#bbf7d0' };
+    if (s >= 5) return { text: '#b45309', bg: '#fffbeb', border: '#fde68a' };
+    return { text: '#b91c1c', bg: '#fef2f2', border: '#fecaca' };
+  }
+
+  function renderResults(data, t) {
+    const sc = scoreStyle(data.overall_score);
+    const resultsEl = document.getElementById('results');
+    resultsEl.style.display = 'block';
+
+    resultsEl.innerHTML = `
+      <div class="score-grid">
+        <div class="score-box" style="background:${sc.bg};border:1.5px solid ${sc.border}">
+          <div class="label">${t.score}</div>
+          <div class="value" style="color:${sc.text}">${data.overall_score}<span class="sub">/10</span></div>
+        </div>
+        <div class="score-box" style="background:${data.ready_for_counseling ? '#f0fdf4' : '#fef2f2'};border:1.5px solid ${data.ready_for_counseling ? '#bbf7d0' : '#fecaca'}">
+          <div style="font-size:38px;margin-bottom:6px">${data.ready_for_counseling ? '✅' : '❌'}</div>
+          <div style="font-size:13px;font-weight:700;color:${data.ready_for_counseling ? '#15803d' : '#b91c1c'}">${data.ready_for_counseling ? t.ready : t.notReady}</div>
+        </div>
+      </div>
+
+      ${data.summary ? `<div class="summary-box"><div class="label">${t.summary}</div><p>${data.summary}</p></div>` : ''}
+
+      ${renderTier(data.tier_1, '🔴', t.t1, '#b91c1c', '#fef2f2', '#fecaca', true, t)}
+      ${renderTier(data.tier_2, '🟡', t.t2, '#92400e', '#fffbeb', '#fde68a', false, t)}
+      ${renderTier3(data.tier_3, t)}
+      ${renderATS(data, t)}
+
+      <button class="reset-btn" onclick="resetApp()">${t.reset}</button>
+    `;
+  }
+
+  function renderTier(items, icon, title, color, bg, border, hasFix, t) {
+    if (!items || !items.length) return '';
+    const cards = items.map(item => `
+      <div class="issue-card">
+        <div class="issue-title" style="color:${color}">${item.title}</div>
+        <div class="issue-detail">${item.detail}</div>
+        ${hasFix && item.fix ? `
+          <div class="issue-fix" style="background:${bg}">
+            <span class="fix-label" style="color:${color}">${t.fix}: </span>${item.fix}
+          </div>` : ''}
+      </div>`).join('');
+
+    return `
+      <div class="tier-section" style="border:1.5px solid ${border}">
+        <div class="tier-header" style="background:${bg}">
+          <div class="tier-header-left">
+            <span style="font-size:16px">${icon}</span>
+            <span class="tier-title" style="color:${color}">${title}</span>
+            <span class="tier-count" style="background:${color}">${items.length}</span>
+          </div>
+        </div>
+        <div class="tier-body">${cards}</div>
+      </div>`;
+  }
+
+  function renderTier3(items, t) {
+    if (!items || !items.length) return '';
+    const rows = items.map(item => `<div class="t3-item">${item}</div>`).join('');
+    return `
+      <div class="tier-section" style="border:1.5px solid #bfdbfe">
+        <div class="tier-header" style="background:#eff6ff">
+          <div class="tier-header-left">
+            <span style="font-size:16px">🔵</span>
+            <span class="tier-title" style="color:#1d4ed8">${t.t3}</span>
+            <span class="tier-count" style="background:#1d4ed8">${items.length}</span>
+          </div>
+        </div>
+        <div class="tier-body">
+          <p class="t3-note">${t.t3note}</p>
+          ${rows}
+        </div>
+      </div>`;
+  }
+
+  function renderATS(data, t) {
+    const atsColor = data.ats_score >= 80 ? '#15803d' : data.ats_score >= 60 ? '#b45309' : '#b91c1c';
+    const issues = (data.ats_issues || []).map(i => `
+      <div class="ats-issue">
+        <span class="severity sev-${i.severity}">${i.severity}</span>
+        <span>${i.issue}</span>
+      </div>`).join('');
+
+    return `
+      <div class="card">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#64748b;margin-bottom:10px">${t.ats}</div>
+        <div class="ats-score" style="color:${atsColor}">${data.ats_score}/100</div>
+        <div style="font-size:12px;color:#64748b;margin:4px 0 12px">${data.recommendation}</div>
+        ${issues || '<p style="font-size:13px;color:#15803d">✓ No ATS issues detected</p>'}
+      </div>`;
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('error-msg');
+    el.style.display = 'block';
+    el.textContent = '⚠️ ' + msg;
+  }
+
+  function resetApp() {
+    selectedFile = null;
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('upload-section').style.display = 'block';
+    document.getElementById('file-selected').style.display = 'none';
+    document.getElementById('error-msg').style.display = 'none';
+    document.getElementById('drop-icon').textContent = '📎';
+    document.getElementById('analyse-btn').disabled = true;
+    document.getElementById('file-input').value = '';
+  }
+</script>
+</body>
+</html>
