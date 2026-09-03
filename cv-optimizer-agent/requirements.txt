@@ -1,6 +1,7 @@
 fastapi
 uvicorn
-pdfplumber
+pymupdf
+ftfy
 python-docx
 langdetect
 google-genai
@@ -8,3 +9,6 @@ python-dotenv
 python-multipart
 requests
 pydantic
+spacy
+https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.7.0/de_core_news_sm-3.7.0-py3-none-any.whl
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
