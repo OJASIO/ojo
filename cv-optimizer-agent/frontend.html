@@ -218,7 +218,7 @@
 </div>
 
 <script>
-  const API = '/review-cv';
+  const API = 'http://127.0.0.1:8000/review-cv';
   let selectedFile = null;
   let currentLang = 'de';
 
@@ -307,16 +307,29 @@
     const formData = new FormData();
     formData.append('file', selectedFile);
 
-    try {
-      const res  = await fetch(API, { method: 'POST', body: formData });
-      const data = await res.json();
-      document.getElementById('loader').style.display = 'none';
-      renderResults(data, t);
-    } catch (err) {
-      document.getElementById('loader').style.display = 'none';
-      document.getElementById('upload-section').style.display = 'block';
-      showError('Could not connect to server. Make sure the backend is running on port 8000.');
+   try {
+    const res  = await fetch(API, { method: 'POST', body: formData });
+    const data = await res.json();
+    document.getElementById('loader').style.display = 'none';
+
+    if (res.status === 422) {
+        document.getElementById('upload-section').style.display = 'block';
+        showError(data.detail);
+        return;
     }
+
+    if (res.status === 400) {
+        document.getElementById('upload-section').style.display = 'block';
+        showError(data.detail);
+        return;
+    }
+
+    renderResults(data, t);
+} catch (err) {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('upload-section').style.display = 'block';
+    showError('Could not connect to server. Make sure the backend is running on port 8000.');
+}
   }
 
   function scoreStyle(s) {

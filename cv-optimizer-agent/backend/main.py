@@ -62,7 +62,10 @@ async def review_cv_endpoint(file: UploadFile = File(...)):
         if not cv_text.strip():
             raise HTTPException(
                 status_code=422,
-                detail="No text could be extracted. File may be a scanned image."
+                detail="No text could be extracted from this document. "
+            "This usually happens when the PDF is a scanned image "
+            "or contains redaction boxes covering the text. "
+            "Please upload a digitally created PDF or a DOCX file instead."
             )
 
         # Step 4 — detect language
