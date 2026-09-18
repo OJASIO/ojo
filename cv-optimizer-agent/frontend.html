@@ -328,7 +328,15 @@
 } catch (err) {
     document.getElementById('loader').style.display = 'none';
     document.getElementById('upload-section').style.display = 'block';
-    showError('Could not connect to server. Make sure the backend is running on port 8000.');
+
+    if (err instanceof TypeError && err.message.includes('fetch')) {
+        showError(
+            'The server is starting up — this takes about 30 seconds on first use. ' +
+            'Please wait a moment and click Analyse CV again.'
+        );
+    } else {
+        showError('Something went wrong. Please try again.');
+    }
 }
   }
 
